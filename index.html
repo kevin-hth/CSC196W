@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kevin's WebPage</title>
+        <link href="Images/favicon.ico" type="image" rel="shortcut icon">
+        <link rel="stylesheet" href="style.css">
+	</head>
+  	<body>
+  		<div class="container">
+        	<h1>Kevin's Home Page</h1>
+        	<div class="navbar">
+            	<a href="contact.html">Contact</a>
+            	<div class="dropdown">
+            		<button class="dropbutton" onclick="myFunction()">Assignments
+            		<i class="fa fa-caret-down"></i>
+            		</button>
+            		<div class="dropdown-content" id="myDropdown">
+						<a href="A2/asgmnt2a.html" target="_blank">Assignment 2A</a>     
+						<a href="A4/fancifymytext.html" target="_blank">Assignment 4</a>
+            		</div>
+            	</div>
+            	<a href="about.html">About</a>
+            	<a href="index.html">Home</a>
+			</div>        
+        	<p>
+	       	 	Hello, welcome to my web page for CSC 196W! Feel free to take a
+	        	look at the assignments done throughout the course.
+        	</p>
+        
+        <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");		
+		}
+		
+		/* Close the dropdown if the user clicks outside of it */
+		window.onclick = function(e) {
+			if (!e.target.matches('.dropbutton')) {
+				var myDropDown = document.getElementById("myDropdown");
+				if (myDropdown.classList.contains('show')) {
+					myDropDown.classList.remove('show');				
+				}
+			}
+		}
+        </script>
+  </body>
+</html>
